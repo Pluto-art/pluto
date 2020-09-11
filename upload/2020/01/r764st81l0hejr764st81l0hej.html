@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script> 
+	var imags = ["1.jpg","2.jpg","3.jpg"];
+	var cou = 0;
+	function run(){
+		setInterval(cycle,2000);
+		
+	}
+	function cycle(){
+		cou++;
+		var num = Math.floor(Math.random()*10%3);
+		
+		/*if(cou==imags.length)
+			cou = 0;*/
+			document.getElementById("imag").src = imags[num];
+		
+	}
+</script>
+</head>
+
+<body onload = "run();">
+<img id="imag" alt="imag" src="imag1.jpg"/>
+</body>
+</html>
